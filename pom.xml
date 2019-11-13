@@ -24,6 +24,14 @@
 					<warSourceDirectory>WebContent</warSourceDirectory>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>com.heroku.sdk</groupId>
+				<artifactId>heroku-maven-plugin</artifactId>
+				<version>2.0.13</version>
+				<configuration>
+					<appName>pruebanomina</appName>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
@@ -32,6 +40,25 @@
 			<artifactId>lombok</artifactId>
 			<version>1.18.10</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.heroku.api/heroku-http-apache -->
+		<dependency>
+			<groupId>com.heroku.api</groupId>
+			<artifactId>heroku-http-apache</artifactId>
+			<version>0.36</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.heroku.sdk/heroku-deploy -->
+		<dependency>
+			<groupId>com.heroku.sdk</groupId>
+			<artifactId>heroku-deploy</artifactId>
+			<version>2.0.6</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.heroku.sdk/heroku-jdbc -->
+		<dependency>
+			<groupId>com.heroku.sdk</groupId>
+			<artifactId>heroku-jdbc</artifactId>
+			<version>0.1.1</version>
+		</dependency>
+
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -58,7 +85,7 @@
 			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 
 
 	</dependencies>
