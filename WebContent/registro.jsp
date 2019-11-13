@@ -108,7 +108,7 @@
 							</button>
 							<button class="waves-effect waves-light btn teal darken-4"
 								type="submit">
-								<i class="material-icons right">search</i>BUSCAR
+								<i class="material-icons right">person_add</i>REGISTRAR
 							</button>
 						</p>
 
