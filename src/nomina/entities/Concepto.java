@@ -19,15 +19,15 @@ public class Concepto implements Serializable {
 
 	private String descripcion;
 
-	//bi-directional many-to-one association to Tipoconcepto
-	@ManyToOne
-	@JoinColumn(name="tipo")
-	private Tipoconcepto tipoconcepto;
-
 	//bi-directional many-to-one association to Tercero
 	@ManyToOne
 	@JoinColumn(name="codtercero")
 	private Tercero tercero;
+
+	//bi-directional many-to-one association to Tipoconcepto
+	@ManyToOne
+	@JoinColumn(name="tipo")
+	private Tipoconcepto tipoconcepto;
 
 	//bi-directional many-to-one association to Liquidacion
 	@OneToMany(mappedBy="concepto")
@@ -52,20 +52,20 @@ public class Concepto implements Serializable {
 		this.descripcion = descripcion;
 	}
 
-	public Tipoconcepto getTipoconcepto() {
-		return this.tipoconcepto;
-	}
-
-	public void setTipoconcepto(Tipoconcepto tipoconcepto) {
-		this.tipoconcepto = tipoconcepto;
-	}
-
 	public Tercero getTercero() {
 		return this.tercero;
 	}
 
 	public void setTercero(Tercero tercero) {
 		this.tercero = tercero;
+	}
+
+	public Tipoconcepto getTipoconcepto() {
+		return this.tipoconcepto;
+	}
+
+	public void setTipoconcepto(Tipoconcepto tipoconcepto) {
+		this.tipoconcepto = tipoconcepto;
 	}
 
 	public List<Liquidacion> getLiquidacions() {

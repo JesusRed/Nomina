@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import nomina.entities.*;
 import nomina.model.empleadoDao;
+import nomina.model.tipoConceptoDao;
 
 public class Prueba {
 	public static void main(String[] args) {
@@ -29,10 +30,14 @@ public class Prueba {
 		empleadoDao empDao = new empleadoDao();
 		empDao.insert(emp);*/
 		
-		empleadoDao empDao = new empleadoDao();
+		/*empleadoDao empDao = new empleadoDao();
 		Empleado emp = empDao.find("11311");
 		
-		System.out.println(emp.getNombre());
+		System.out.println(emp.getNombre());*/
+		
+		tipoConceptoDao tcDao = new tipoConceptoDao();
+		Tipoconcepto tc = tcDao.find(0);
+		System.out.println(tc.getDescripcion());
 		
 		
 		

@@ -25,20 +25,20 @@ public class Liquidacion implements Serializable {
 
 	private BigDecimal valor;
 
-	//bi-directional many-to-one association to Proceso
+	//bi-directional many-to-one association to Concepto
 	@ManyToOne
-	@JoinColumn(name="numproceso")
-	private Proceso proceso;
+	@JoinColumn(name="codconcepto")
+	private Concepto concepto;
 
 	//bi-directional many-to-one association to Empleado
 	@ManyToOne
 	@JoinColumn(name="codempleado")
 	private Empleado empleado;
 
-	//bi-directional many-to-one association to Concepto
+	//bi-directional many-to-one association to Proceso
 	@ManyToOne
-	@JoinColumn(name="codconcepto")
-	private Concepto concepto;
+	@JoinColumn(name="numproceso")
+	private Proceso proceso;
 
 	public Liquidacion() {
 	}
@@ -75,12 +75,12 @@ public class Liquidacion implements Serializable {
 		this.valor = valor;
 	}
 
-	public Proceso getProceso() {
-		return this.proceso;
+	public Concepto getConcepto() {
+		return this.concepto;
 	}
 
-	public void setProceso(Proceso proceso) {
-		this.proceso = proceso;
+	public void setConcepto(Concepto concepto) {
+		this.concepto = concepto;
 	}
 
 	public Empleado getEmpleado() {
@@ -91,12 +91,12 @@ public class Liquidacion implements Serializable {
 		this.empleado = empleado;
 	}
 
-	public Concepto getConcepto() {
-		return this.concepto;
+	public Proceso getProceso() {
+		return this.proceso;
 	}
 
-	public void setConcepto(Concepto concepto) {
-		this.concepto = concepto;
+	public void setProceso(Proceso proceso) {
+		this.proceso = proceso;
 	}
 
 }
